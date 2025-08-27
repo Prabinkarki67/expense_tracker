@@ -1,0 +1,77 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    background-color:F01A1A;
+    color: #333;
+}
+
+/* Navbar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content wrapper to fill remaining space */
+.main-content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+}
+
+.description {
+    margin-top: 30px;
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+}
+
+.description h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.description p {
+    font-size: 1rem;
+    color: #333;
+}

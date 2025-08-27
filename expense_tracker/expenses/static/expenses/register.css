@@ -1,0 +1,46 @@
+/* Register form styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.register-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.register-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #444;
+    box-shadow: 0 0 5px rgba(68, 68, 68, 0.5);
+}
+
+.btn-submit {
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #333;
+}
