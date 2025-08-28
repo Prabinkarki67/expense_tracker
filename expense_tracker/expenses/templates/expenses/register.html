@@ -151,6 +151,7 @@
         <p>Register below to start tracking your daily expenses.</p>
 
         <form class="register-form" method="POST" action="#">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
