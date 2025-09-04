@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        /* Reset and body */
+        body {
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav .nav-left a {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Main content container */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            flex-wrap: wrap; /* makes it responsive */
+            min-height: 100vh; /* fill entire screen height */
+            box-sizing: border-box; /* include padding in height */
+        }
+
+
+        /* Left block */
+        .left-block {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex: 0 0 60%; /* take 60% width */
+            margin-bottom: 1rem;
+        }
+
+        /* Right block */
+        .right-block {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex: 0 0 35%; /* take 35% width */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .right-block a {
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .right-block a:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .description h2 {
+            margin-top: 0;
+            color: #444;
+        }
+
+        .description p {
+            line-height: 1.6;
+        }
+
+        @media(max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .left-block, .right-block {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="#">Expense Tracker</a>
+        </div>
+        <div class="nav-right">
+            <span>Welcome, {{ user.username }}</span> |
+            <a href="{% url 'index' %}">Logout</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <!-- Left block -->
+        <div class="left-block">
+            <h1>Hello, {{ user.username }} 👋</h1>
+            <p>This is your personal dashboard. Manage your expenses and track your budget here.</p>
+
+            <section class="description">
+                <h2>Your Info</h2>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+            </section>
+        </div>
+
+        <!-- Right block -->
+        <div class="right-block">
+            <a href="#">Add your expense</a>
+        </div>
+    </div>
+</body>
+</html>
