@@ -10,7 +10,7 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():  # automatically checks password1 == password2
             form.save()  # saves the user to the database
-            return render(request, 'expenses/register.html', {'success': 'Account created successfully!'})
+            return render(request, 'user/login.html', {'success': 'Account created successfully!'})
         else:
             return render(request, 'expenses/register.html', {'form': form})
     else:
