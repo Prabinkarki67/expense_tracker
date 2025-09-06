@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .models import Expense
+
 
 
     
@@ -24,5 +26,17 @@ def login_user(request):
     else:
         return render(request, 'user/login.html')
 
+
 def add_expense(request):
-    return render( request, 'user/add_exp.html')
+    if request.method == "POST":
+        product = request.POST.get("category")   # from your <select>
+        expense_price = request.POST.get("amount")  # from your <input>
+        
+        Expense.objects.create(
+            user=request.user,
+            product=product,
+            expensed_price=expense_price
+        )
+        return redirect("user.html")  # redirect after saving
+
+    return render(request, "user/add_exp.html")

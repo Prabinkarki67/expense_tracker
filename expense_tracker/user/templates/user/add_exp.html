@@ -218,16 +218,19 @@
             <a href="#"><i class="fas fa-user-plus"></i> Register</a>
         </div>
     </nav>
-
     <div class="main-content">
         <div class="expense-form-container">
             <h2 class="form-title"><i class="fas fa-plus-circle"></i> Add New Expense</h2>
-            <form id="expenseForm" action="#" method="post">
+            
+            <!-- Form starts -->
+            <form id="expenseForm" action="{% url 'add_expense' %}" method="post">
+                {% csrf_token %}
+                
                 <div class="form-group">
                     <label for="expenseCategory"><i class="fas fa-tag"></i> Expense on:</label>
                     <select id="expenseCategory" name="category" required>
                         <option value="" disabled selected>Select a category</option>
-                        <option value="grocerry"><i class="fas fa-shopping-basket category-icon"></i> Grocerry</option>
+                        <option value="grocerry">Grocery</option>
                         <option value="study">Study</option>
                         <option value="entertainment">Entertainment</option>
                         <option value="transport">Transport</option>
@@ -244,9 +247,8 @@
                 </div>
                 
                 <button type="submit" class="submit-btn"><i class="fas fa-plus"></i> Add Expense</button>
-                
-
             </form>
+            <!-- Form ends -->
         </div>
     </div>
 
