@@ -8,4 +8,4 @@ class Expense(models.Model):
     product = models.CharField(max_length=100)
     
     def __str__(self):
-        return f"{self.username} - {self.expensed_price} on {self.product}"
+        return f"{self.user} - {self.expensed_price} on {self.product} date {self.date.strftime('%B %d, %Y')}"
