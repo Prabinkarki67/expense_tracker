@@ -23,3 +23,6 @@ def login_user(request):
             return redirect('login')
     else:
         return render(request, 'user/login.html')
+
+def add_expense(request):
+    return render( request, 'user/add_exp.html')
