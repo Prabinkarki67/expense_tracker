@@ -26,17 +26,17 @@ def login_user(request):
     else:
         return render(request, 'user/login.html')
 
-
+@login_required
 def add_expense(request):
-    if request.method == "POST":
-        product = request.POST.get("category")   # from your <select>
-        expense_price = request.POST.get("amount")  # from your <input>
-        
-        Expense.objects.create(
-            user=request.user,
-            product=product,
-            expensed_price=expense_price
-        )
-        return redirect("user.html")  # redirect after saving
+    if request.method == 'POST':
+        category = request.POST.get('category')
+        amount = request.POST.get('amount')
 
-    return render(request, "user/add_exp.html")
+        if category and amount:
+            Expense.objects.create(
+                user=request.user, 
+                category=category,
+                amount=amount
+            )
+            return redirect('dashboard') 
+    return render(request, 'user/add_exp.html')
