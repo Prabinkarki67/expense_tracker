@@ -9,7 +9,10 @@ from .models import Expense
     
 @login_required
 def user_page(request):
-    return render(request, 'user/user.html', {'user':request.user})
+    expenses = Expense.objects.filter(user=request.user)
+    return render(request, 'user/user.html', {
+        'user':request.user,
+        'expenses': expenses})
 
 
 def login_user(request):
@@ -38,5 +41,5 @@ def add_expense(request):
                 category=category,
                 amount=amount
             )
-            return redirect('dashboard') 
+            return redirect('user_page') 
     return render(request, 'user/add_exp.html')

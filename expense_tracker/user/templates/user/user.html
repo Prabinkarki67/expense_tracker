@@ -125,6 +125,11 @@
         <div class="left-block">
             <h1>Hello, {{ user.username }} 👋</h1>
             <p>This is your personal dashboard. Manage your expenses and track your budget here.</p>
+            <p>{% for expense in expenses %}
+                <p>{{ expense.category }} - {{ expense.amount }} NRs</p>
+            {% empty %}
+                <p>No expenses yet!</p>
+            {% endfor %}</p>
 
             <section class="description">
                 <h2>Your Info</h2>
