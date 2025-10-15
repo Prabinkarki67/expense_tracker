@@ -1,48 +1,48 @@
-EXPENSE TRACKER(django)
+# 💰 Expense Tracker (Django)
 
-A simple and user-friendly EXPENSE TRACKER WEB App built using (Django).  
-It allows users to add, view, and analyze expenses with a clean dashboard and a category-wise pie chart.
+A simple and user-friendly **Expense Tracker Web App** built using **Django**.  
+It allows users to add, view, and analyze expenses with a clean dashboard and category-wise pie chart visualization.
 
-features
-    User authentication(login/Logout)
-    Add & manage daily expenses
-    View all expense with category, date and amount
-    Total expense summary
-    Clean UI
+---
 
-Tech Stack
-    Django(backend)
-    HTML, CSS(frontend)
-    SQLite(database)
-    Matplotlib(chart)
-    Git, Github
+## ✨ Features
+- 👤 User Authentication (Login/Logout)
+- ➕ Add & Manage Daily Expenses
+- 📅 View All Expenses by Category, Date, and Amount
+- 💵 Total Expense Summary
+- 🧭 Clean and Responsive UI
 
+---
+
+## 🛠️ Tech Stack
+- **Backend:** Django  
+- **Frontend:** HTML, CSS  
+- **Database:** SQLite  
+- **Visualization:** Matplotlib  
+- **Version Control:** Git & GitHub  
+
+---
 
 ## 📸 Screenshots
 
 ### 🏠 Dashboard
 ![Dashboard Screenshot](screenshots/dashboard.png)
 
+---
 
-##Setup Instruction
+## ⚙️ Setup Instructions
+
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/expense-tracker.git
 cd expense-tracker
 
+# Install dependencies
+pip install -r requirements.txt
 
-#install dependencies
-pip install -r requirement.txt
-
-#Run database migrations
+# Apply database migrations
 python manage.py makemigrations
 python manage.py migrate
 
-#Run the server
+# Run the development server
 python manage.py runserver
-
-
-```
-
-Author
-Prabin Karki
-BE in Electronics, Communication and Information Technology
