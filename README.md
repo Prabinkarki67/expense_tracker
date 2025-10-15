@@ -25,7 +25,8 @@ It allows users to add, view, and analyze expenses with a clean dashboard and ca
 
 ## 📸 Screenshots
 
-
+### 🏠 Dashboard
+![Dashboard Screenshot](screenshots/dashboard.png)
 ---
 
 ## ⚙️ Setup Instructions
