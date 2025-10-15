@@ -16,3 +16,26 @@ Tech Stack
     SQLite(database)
     Matplotlib(chart)
     Git, Github
+
+##Setup Instruction
+```bash
+git clone https://github.com/yourusername/expense-tracker.git
+cd expense-tracker
+
+
+#install dependencies
+pip install -r requirement.txt
+
+#Run database migrations
+python manage.py makemigrations
+python manage.py migrate
+
+#Run the server
+python manage.py runserver
+
+
+```
+
+Author
+Prabin Karki
+BE in Electronics, Communication and Information Technology
