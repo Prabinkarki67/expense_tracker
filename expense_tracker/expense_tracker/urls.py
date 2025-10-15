@@ -19,6 +19,7 @@ from django.urls import path, include
 from expenses import views as expenses_view
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('expenses.urls')),
     path('expenses/', include('expenses.urls')),
     path('user/', include('user.urls')),
     path('user/', include('django.contrib.auth.urls')),
