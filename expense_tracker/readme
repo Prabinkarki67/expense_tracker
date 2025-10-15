@@ -17,6 +17,13 @@ Tech Stack
     Matplotlib(chart)
     Git, Github
 
+
+## 📸 Screenshots
+
+### 🏠 Dashboard
+![Dashboard Screenshot](screenshots/dashboard.png)
+
+
 ##Setup Instruction
 ```bash
 git clone https://github.com/yourusername/expense-tracker.git
