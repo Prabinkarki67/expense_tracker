@@ -1,6 +1,5 @@
-1. today i learnt about some basics of sql like
-    a. SQL commands/Queries
-    b. Data types
-    c. SQL operators
-7th September: Today I did nothing because of my exam 
-196h September: my coding resumes
+EXPENSE TRACKER(django)
+
+A simple and user-friendly EXPENSE TRACKER WEB App built using (Django).  
+It allows users to add, view, and analyze expenses with a clean dashboard and a category-wise pie chart.
+
