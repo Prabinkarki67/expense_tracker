@@ -1,0 +1,46 @@
+# 💰 Expense Tracker (Django)
+
+A simple and user-friendly **Expense Tracker Web App** built using **Django**.  
+It allows users to add, view, and analyze expenses with a clean dashboard and category-wise pie chart visualization.
+
+---
+
+## ✨ Features
+- 👤 User Authentication (Login/Logout)
+- ➕ Add & Manage Daily Expenses
+- 📅 View All Expenses by Category, Date, and Amount
+- 💵 Total Expense Summary
+- 🧭 Clean and Responsive UI
+
+---
+
+## 🛠️ Tech Stack
+- **Backend:** Django  
+- **Frontend:** HTML, CSS  
+- **Database:** SQLite  
+- **Visualization:** Matplotlib  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 📸 Screenshots
+
+
+---
+
+## ⚙️ Setup Instructions
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/expense-tracker.git
+cd expense-tracker
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Apply database migrations
+python manage.py makemigrations
+python manage.py migrate
+
+# Run the development server
+python manage.py runserver
